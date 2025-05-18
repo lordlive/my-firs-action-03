@@ -1,0 +1,47 @@
+name: complex
+
+on:
+  push:
+    branches:
+      - rc-*
+  pull_request:
+    branches:
+      - main
+
+jobs:
+    job-1:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+
+          - name: Run a job one
+            run: date +%Y-%m-%d
+
+    job-2:
+        runs-on: windows-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+
+          - name: Run a job two
+            run: date
+    
+    job-3:  
+        runs-on: macos-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+
+          - name: Run a job three
+            run: date
+
+    job-4:
+        runs-on: ubuntu-latest
+        needs: [job-1, job-2, job-3]
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+
+          - name: Run a job four
+            run: echo "All jobs are done"
