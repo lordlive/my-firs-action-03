@@ -41,4 +41,3 @@ jobs:
         with:
           workflow-ref: ${{ github.ref_name }}
           workflow-path: .github/workflows/manual.yml
-          build-version: ""
