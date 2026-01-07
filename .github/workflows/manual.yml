@@ -2,7 +2,7 @@ name: manual
 on:
   workflow_dispatch:
     inputs:
-      build_version:
+      build-version:
         description: 'Build version'
         required: false
         default: 'v1.0.0'
@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "This is a manually triggered workflow from ${{ github.ref_name }}"
-      - run: echo "Build version is ${{ github.event.inputs.build_version }}"
+      - run: echo "Build version is ${{ github.event.inputs.build-version }}"
