@@ -17,12 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: date +%Y-%m-%d
-
-  windows:
-    runs-on: windows-latest
-    steps:
-      - run: date
-    
+  
   macos:  
     runs-on: macos-latest
     steps:
@@ -30,7 +25,7 @@ jobs:
 
   depends:
     runs-on: ubuntu-latest
-    needs: [ubuntu, macos, windows]
+    needs: [ubuntu, macos]
     steps:
     - run: echo "All jobs are done"
 
@@ -42,7 +37,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: run-workflow
-        uses: lordlive/custom-action/trigger@v1.0.3
+        uses: lordlive/custom-action/trigger@v1.0.4
         with:
           workflow-ref: ${{ github.ref_name }}
           workflow-path: .github/workflows/manual.yml
