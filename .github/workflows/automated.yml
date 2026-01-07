@@ -33,7 +33,7 @@ jobs:
   trigger-manual:
     name: Trigger manual action
     needs: depends
-    uses: lordlive/custom-action/trigger
+    uses: lordlive/custom-action/trigger@main
     with:
       workflow-ref: ${{ github.ref_name }}
       workflow-path: .github/workflows/manual.yml
