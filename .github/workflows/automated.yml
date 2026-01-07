@@ -33,8 +33,13 @@ jobs:
   trigger-manual:
     name: Trigger manual action
     needs: depends
-    uses: lordlive/custom-action/trigger@v1.0.3
-    with:
-      workflow-ref: ${{ github.ref_name }}
-      workflow-path: .github/workflows/manual.yml
-      build-version: ""
+    runs-on: ubuntu-latest
+    steps:    
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: run-workflow
+        uses: lordlive/custom-action/trigger@v1.0.3
+        with:
+          workflow-ref: ${{ github.ref_name }}
+          workflow-path: .github/workflows/manual.yml
+          build-version: ""
