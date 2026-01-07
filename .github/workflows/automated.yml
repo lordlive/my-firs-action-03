@@ -39,6 +39,6 @@ jobs:
       - name: run-workflow
         uses: lordlive/custom-action/trigger@v1.0.7
         with:
-          workflow-ref: ${{ github.ref_name }}
+          workflow-ref: v1.1.0 # ${{ github.ref_name }}
           workflow-path: .github/workflows/manual.yml
-          build-version: v1.1.0
+          build-version: v1.1.1
