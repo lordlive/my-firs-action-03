@@ -2,11 +2,11 @@ name: complex
 
 on:
   push:
-    branches:
+    branches-ignore:
       - rc-*
-  pull_request:
-    branches:
-      - main
+  # pull_request:
+  #   branches:
+  #     - main
 
 permissions:
   contents: read
