@@ -18,7 +18,6 @@ jobs:
   trigger-manual:
     name: Trigger manual action
     uses: lordlive/standart-workflows/.github/workflows/trigger.yml@rc-1.0.0
-    secrets: inherit
     with:
       workflow-ref: ${{ github.ref_name }}
       workflow-path: .github/workflows/manual.yml
