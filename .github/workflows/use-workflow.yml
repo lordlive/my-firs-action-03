@@ -1,4 +1,4 @@
-name: complex
+name: use-workflow
 
 on:
   push:
