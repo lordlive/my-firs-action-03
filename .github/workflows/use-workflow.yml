@@ -18,6 +18,6 @@ jobs:
     name: Trigger manual action
     uses: lordlive/standart-workflows/.github/workflows/trigger.yml@rc-1.0.0
     with:
-      workflow-ref: rc-1.0.2
+      workflow-ref: v1.0.0
       workflow-path: .github/workflows/manual.yml
       build-version: v1.1.0
