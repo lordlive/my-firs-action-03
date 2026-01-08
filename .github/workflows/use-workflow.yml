@@ -9,10 +9,6 @@ on:
       - main
   workflow_dispatch:
 
-# permissions:
-#   contents: write
-#   actions: write
-
 jobs:
   trigger-manual:
     name: Trigger manual action
