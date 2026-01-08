@@ -7,6 +7,10 @@ on:
         required: false
         default: 'v1.0.0'
 
+permissions:
+  contents: read
+  actions: write
+
 jobs:
   manual-job:
     runs-on: ubuntu-latest

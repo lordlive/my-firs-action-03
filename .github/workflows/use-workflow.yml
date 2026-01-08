@@ -12,7 +12,8 @@ on:
 permissions:
   id-token: write
   contents: read
-  actions: write
+  # actions: write
+
 jobs:
   trigger-manual:
     name: Trigger manual action
