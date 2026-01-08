@@ -9,9 +9,9 @@ on:
       - main
   workflow_dispatch:
 
-permissions:
-  contents: write
-  actions: write
+# permissions:
+#   contents: write
+#   actions: write
 
 jobs:
   trigger-manual:
