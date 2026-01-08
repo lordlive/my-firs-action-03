@@ -10,9 +10,9 @@ on:
   workflow_dispatch:
 
 permissions:
-  id-token: write
-  contents: read
-  # actions: write
+  # id-token: write
+  contents: write
+  actions: write
 
 jobs:
   trigger-manual:
